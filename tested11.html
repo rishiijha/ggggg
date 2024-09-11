@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bazaardigital.in</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+        .service-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #eee;
+            margin-top: 30px;
+        }
+        .service-icons div {
+            text-align: center;
+            max-width: 180px;
+            transition: transform 0.3s ease;
+        }
+        .service-icons img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .service-icons div.active img {
+            transform: scale(1.2); /* Zoom effect */
+        }
+        .service-icons p {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #555;
+        }
+        #services {
+            padding: 20px;
+            background-color: #fff;
+        }
+        #services div {
+            margin-bottom: 20px;
+        }
+        #services h3 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #333;
+        }
+        #services p {
+            margin: 0;
+            font-size: 16px;
+            color: #666;
+        }
+        footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>bazaardigital</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="https://www.instagram.com/p/CzOJsQDojv1/">Products</a></li>
+                <li><a href="https://www.instagram.com/p/C5Vkw0qhEb3/">About Us</a></li>
+                <li><a href="https://www.instagram.com/bazaardigital.in/">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Service Icons in Header with Links to Sections -->
+        <div class="service-icons">
+            <div data-service="web-development">
+                <a href="#web-development">
+                    <img src="Web Development.jpeg" alt="Web Development" width="150">
+                    <p>Web Development</p>
+                </a>
+            </div>
+            <div data-service="digital-marketing">
+                <a href="#digital-marketing">
+                    <img src="Digital Marketing.jpeg" alt="Digital Marketing" width="150">
+                    <p>Digital Marketing</p>
+                </a>
+            </div>
+            <div data-service="app-development">
+                <a href="#app-development">
+                    <img src="App Development.jpeg" alt="App Development" width="150">
+                    <p>App Development</p>
+                </a>
+            </div>
+            <div data-service="influencer-marketing">
+                <a href="#influencer-marketing">
+                    <img src="Influencer Marketing.jpeg" alt="Influencer Marketing" width="150">
+                    <p>Influencer Marketing</p>
+                </a>
+            </div>
+            <div data-service="seo">
+                <a href="#seo">
+                    <img src="SEO.jpeg" alt="SEO" width="150">
+                    <p>SEO</p>
+                </a>
+            </div>
+            <div data-service="label-designing">
+                <a href="#label-designing">
+                    <img src="Label Designing.jpeg" alt="Label Designing" width="150">
+                    <p>Label Designing</p>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Service Details Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+
+        <!-- Web Development Service -->
+        <div id="web-development">
+            <h3>Web Development</h3>
+            <p>Details about Web Development services.</p>
+        </div>
+
+        <!-- Digital Marketing Service -->
+        <div id="digital-marketing">
+            <h3>Digital Marketing</h3>
+            <p>Details about Digital Marketing services.</p>
+        </div>
+
+        <!-- App Development Service -->
+        <div id="app-development">
+            <h3>App Development</h3>
+            <p>Details about App Development services.</p>
+        </div>
+
+        <!-- Influencer Marketing Service -->
+        <div id="influencer-marketing">
+            <h3>Influencer Marketing</h3>
+            <p>Details about Influencer Marketing services.</p>
+        </div>
+
+        <!-- SEO Service -->
+        <div id="seo">
+            <h3>SEO</h3>
+            <p>Details about SEO services.</p>
+        </div>
+
+        <!-- Label Designing Service -->
+        <div id="label-designing">
+            <h3>Label Designing</h3>
+            <p>Details about Label Designing services.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Your Shop Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.service-icons div').forEach(icon => {
+            icon.addEventListener('click', function() {
+                // Remove active class from all icons
+                document.querySelectorAll('.service-icons div').forEach(div => div.classList.remove('active'));
+                // Add active class to the clicked icon
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
